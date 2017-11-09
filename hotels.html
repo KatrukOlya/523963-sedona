@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="style.css">  
+  </head>
+  <body>
+    <header class="main-header">
+	  <nav class="main-navigation">
+	    <a class="main-navigation-logo"><img src="img/nav-logo.png" width="200" height="300" alt="Герб Седоны ведет на главную страницу">
+	    <ul class="main-navigation-items">
+		  <li><a href="info.html">Информация</a></li>
+		  <li><a href="photo-video.html">Фото и видео</a></li>
+		  <li><a href="map.html">Карта штата</a></li>
+		  <li><a href="hotels.html">Гостиницы</a></li>
+		</ul>
+	  </nav> 
+	</header>
+	
+	<main class="conteiner">
+	
+	  <section class="hotel-search">
+	    <h1 class="visually-hidden">Поиск отеля<h1/>
+		<h2 class="visually-hidden">Выбор параметров жилья</h2>
+		<form>
+		  <label class="hotel-search-label" for="infrastructure">Инфраструктура:</label>
+		  <ul>
+		    <li><input type="checkbox" id="infrastructure" name="pool">Бассейн</li>
+			<li><input type="checkbox" id="infrastructure" name="parks">Парковка</li>
+			<li><input type="checkbox" id="infrastructure" name="wi-fi">wi-fi</li>
+		  </ul>
+		  <label class="hotel-search-label" for="type-hotel">Тип жилья:</label>
+		  <ul>
+		    <li><input type="checkbox" id="type-hotel" name="hotel">Гостиница</li>
+			<li><input type="checkbox" id="type-hotel" name="motel">Мотель</li>
+			<li><input type="checkbox" id="type-hotel" name="apartments">Апартаменты</li>
+		  </ul>
+		  <!--здесь много вопросов. как работает вывод данных? через Java?-->
+		  <div class="hotel-search-price">
+		    <label class="hotel-search-label" for="range">Стоимость в сутки (P):</label>
+			<input class="hotel-search-price-range" id="range" type="range" min="0" max="5000" step="500">
+			<table> 
+			  <td><output class="otel-search-price-min" for="#">от </td>
+			  <td><output class="otel-search-price-max">до 3000</td>
+			</table>
+		  </div>
+		  
+		  <input class="hotel-search-result" type="submit" value="показать">
+		</form>
+	  </section>
+	  
+	  <section class="hotel-search-sorting">
+	    <label class="hotel-search-result">Найдено:<output class="" name="" for="">3</output></label>
+	    <h2 class="hotel-search-sorting-title">Сортировка<h2/>
+		<ul class="hotesearch-sorting-settings">
+		  <li><a href="#">по цене</a></li>
+		  <li><a href="#">по типу</a></li>
+		  <li><a href="#">по рейтингу</a></li>
+		</ul>
+		<!--то, что я не знаю-->
+		<span class="hostels-selection-sorting-sequence-up"><a href="#"><img href="img/buttons/up"></a></span>
+		<span class="hostels-selection-sorting-sequence-down"><a href="#"><img href="img/buttons/down"></a></span>
+		<!--то, что я не знаю-->
+		
+		<article class="hotel-card">
+		  <img href="img/hotels/amara-resot" alt="фото Amara resot end spa" height="" width="">
+		  <h3 class="hotel-card-name">Amara resot end spa<h3/>
+		  <p class="hotel-card-description">Гостиница от 4000 р.<p/>
+		  <p class="hotel-card-rating">рейтинг:8,5</p>
+		  <a class="hotel-card-more">Подробнее</a>
+		  <a class="hotel-card-book">Забронировать</a>
+		  
+		<article/>
+		
+		<article class="hotel-card">
+		  <img href="img/hotels/desert-quail" alt="фото Desert quail inn" height="" width="">
+		  <h3 class="hotel-card-name">Desert quail inn<h3/>
+		  <p class="hotel-card-description">Мотель от 3000 р.<p/>
+		  <p class="hotel-card-rating">рейтинг:8,9</p>
+		  <a class="hotel-card-more">Подробнее</a>
+		  <a class="hotel-card-book">Забронировать</a>
+		<article/>
+		
+		<article class="hotel-card">
+		  <img href="img/hotels/villas-poco-diablo" alt="фото Villas at Poco Diablo" height="111" width="122">
+		  <h3 class="hotel-card-name">Villas at Poco Diablo<h3/>
+		  <p class="hotel-card-description">Апартаменты от 2000 р.<p/>
+		  <p class="hotel-card-rating">рейтинг:9,2</p>
+		  <a class="hotel-card-more">Подробнее</a>
+		  <a class="hotel-card-book">Забронировать</a>
+		<article/>
+		
+	  <section/>
+	 
+	</main>
+	
+	<footer class="main-footer">
+	  <p class="hashtag">#visitsedona</p>
+	  <div class="footer-social">
+	    <ul class="footer-social-list">
+		  <li><a class="social-button" href="#">Твиттер</a></li>
+		  <li><a class="social-button" href="#">Фейсбук</a></li>
+		  <li><a class="social-button" href="#">Инстаграм</a></li>
+		</ul>
+	  </div>
+	  <p class="footer-copyright">website by<a href="https://htmlacademy.ru"><img href="img/copyright-logo-academy" alt="логотип академии"></a></p>
+	</footer>
