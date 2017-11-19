@@ -3,14 +3,16 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Седона</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">  
 </head>
 
 <body>
 	<div class="container">
 		<header class="main-header">
 			<nav class="main-navigation">
-				<a class="main-navigation-logo"><img src="img/nav-logo.png" width="130" height="70" alt="Логотип Седоны ведет на главную страницу"></a>
+				<a class="main-navigation-logo" href="index.html"><img src="img/nav-logo.png" width="130" height="70" alt="Логотип Седоны ведет на главную страницу"></a>
 				<ul class="items-navigation">
 					<li><a href="information.html">Информация</a></li>
 					<li><a href="photo-video.html">Фото и видео</a></li>
@@ -35,9 +37,9 @@
 					<!--1 причина-->
 				<div class="reason-main">
 					<div class="reason-main-info">
-						<h3 class="reason-main-title">Настоящий городок</h3>
-						<p class="reason-main-number">№1</p>
-						<p class="reason-main-text">Седона - не аттракцион для туристов, там течет своя жизнь</p>
+						<h3>Настоящий городок</h3>
+						<p>-№1-</p>
+						<p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
 					</div>
 
 					<div class="reason-main-picture">
@@ -49,17 +51,17 @@
 				<div class="reason-more">
 					<div class="reason-more-info">
 						<h3>Жилье</h3>
-						<p class="reason-more-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+						<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
 					</div>
 
 					<div class="reason-more-info">
 						<h3>Еда</h3>
-						<p class="reason-more-text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+						<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
 					</div>
 
 					<div class="reason-more-info">
 						<h3>Сувениры</h3>
-						<p class="reason--more-text">Не только китайского, но и местного производства!</p>
+						<p class="reason-more-text">Не только китайского, но и местного производства!</p>
 					</div>		
 				</div>
 
@@ -70,9 +72,9 @@
 					</div>
 
 					<div class="reason-main-info">
-						<h3 class="reason-main-title">Там есть мост Дьявола</h3>
-						<p class="reason-main-number">№2</p>
-						<p class="reason-main-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+						<h3>Там есть мост Дьявола</h3>
+						<p>№2</p>
+						<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
 					</div>	
 				</div>
 
@@ -80,20 +82,20 @@
 				<div class="reason">
 					<div class="reason-info">
 						<h3>Небольшая площадь</h3>
-						<p class="reason-number">№3</p>
-						<p class="reason-text">Все достопримечательности находятся очень близко</p>
+						<p>№3</p>
+						<p>Все достопримечательности находятся очень близко</p>
 					</div>
 
 					<div class="reason-info">
 						<h3>Красивая дорога</h3>
-						<p class="reason-number">№4</p>
-						<p class="reason-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+						<p>№4</p>
+						<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 					</div>
 
 					<div class="reason-info">
 						<h3>Мало туристов</h3>
-						<p class="reason-number">№5</p>
-						<p class="reason-text">Большинство едет в Гранд Каньон и толпится там</p>
+						<p>№5</p>
+						<p>Большинство едет в Гранд Каньон и толпится там</p>
 					</div>		
 				</div>
 
@@ -104,26 +106,26 @@
 				<header class="search-intro">
 					<h2 class="search-title">Заинтересовались?</h2>
 					<p class="search-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-					<button type="button" class="search-button">Поиск гостиницы в Седоне</button>
+					<button type="button" class="popup-search-button">Поиск гостиницы в Седоне</button>
 				</header>
 
-				<div class="search-form">
+				<div class="search-form-block">
 					<form class="search-form">
 
 						<div class="date-arrival">
-							<label class="search-item">Дата заезда:<input type="date" name="date-arrival"></label>
+							<label>Дата заезда:<input type="date" name="date-arrival"></label>
 						</div>
 
 						<div class="date-departure">
-							<label class="search-item">Дата выезда:<input type="date" name="date-departure"></label>
+							<label>Дата выезда:<input type="date" name="date-departure"></label>
 						</div>
 
 						<div class="number-person">
-							<label class="search-item">Взрослые:<input type="number" name="number-grown" step="1" min="1"></label>
-							<label class="search-item">Дети:<input type="number" name="number-children" step="1" min="0"></label>
+							<label>Взрослые:<input type="number" name="number-grown" step="1" min="1"></label>
+							<label>Дети:<input type="number" name="number-children" step="1" min="0"></label>
 						</div>
 
-						<input type="submit" value="Найти">
+						<input class="search-button" type="submit" value="Найти">
 
 					</form>	
 				</div>
@@ -131,42 +133,12 @@
 				<div class="map">
 					<img src="img/map.png" alt="Седона на карте" height="466" width="1200">
 				</div>
-
 			</div>
-
 		</main>							
-														<!--Форма через кнопки для стилизации
-														<div class="search-form">
-															<form class="search-form">
-																<div class="date-arrival">
-																	<label class="search-item" for="date-arrival">Дата заезда:</label>
-																	<input type="text" name="date-arrival" id="date-arrival">
-																	<button type="button" class="search-calendar">Календарь</button>
-																</div>
-																<div class="date-departure">
-																	<label class="search-item" for="date-departure">Дата выезда:</label>
-																	<input type="date" name="date-departure" id="date-departure">
-																	<button type="button" class="search-calendar">Календарь</button>
-																</div>
-																<div class="number-grown">
-																	<label class="search-item" for="number-grown>Взрослые:</label>
-																	<input type="number" name="number-grown" id="number-grown">
-																	<button type="button" class="search-minus">Минус</button>
-																	<button type="button" class="search-plus">Плюс</button>
-																</div>
-																<div class="number-children">
-																	<label class="search-item" for="number-children>Дети:</label>
-																	<input type="number" name="number-grown" id="number-children">
-																	<button type="button" class="search-minus">Минус</button>
-																	<button type="button" class="search-plus">Плюс</button>
-																</div>
-																<input type="submit" value="Найти">
-															</form>
-														</div>	
-														-->
+														
 		<footer class="main-footer">
 			<div class="hashtag">
-				<a href="#" class="hashtag">#visitsedona</a>
+				<a href="#">#visitsedona</a>
 			</div>
 
 			<div class="footer-social">
