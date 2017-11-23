@@ -1,0 +1,531 @@
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: "PT Sans", "Arial", san-serif;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 700;
+	color: #333333;
+	text-transform: uppercase;
+
+	background-color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+}
+
+.main-navigation {
+	font-size: 14px;
+	line-height: 26px;
+	color: #000000;
+	background-color: #ffffff;
+}
+
+.items-navigation {
+	list-style: none;
+}
+
+.items-navigation a {
+	color: #000000;
+}
+
+.items-navigation a:hover {
+	color: #81b3d2;
+}
+
+.items-navigation a:activ {
+	color: #000000;
+}
+
+.items-navigation a:focus {
+	color: #766357;
+}
+
+.main-navigation-logo {
+}
+
+.banner {
+	background-position: top center;
+	background-image: url("../img/background.jpg");
+	background-repeat: no-repeat;
+	background-size: 1200px 800px;
+}
+
+.reasons {}
+
+.reason-title {
+	text-align: center;
+}
+
+.reason-title h2 {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.reason-title p {
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 400;
+	color: #333333;
+}
+
+.reason-main {}
+
+.reason-main-info {
+	text-align: center;
+	background-color: #81b3d2;
+}
+
+.reason-main-info h3{
+	font-size: 21px;
+	line-height: 21px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.reason-main-info p {
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.reason-main-picture {}
+
+.reason-more {}
+
+.reason-more-housing,
+.reason-more-eat,
+.reason-more-souvenirs {
+	text-align: center;
+	background-color: #ffffff;
+}
+
+.reason-more-housing h3,
+.reason-more-eat h3,
+.reason-more-souvenirs h3 {
+	font-size: 21px;
+	line-height: 21px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.reason-more-housing p,
+.reason-more-eat p,
+.reason-more-souvenirs p {
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	color: #333333;
+}
+
+.reason {}
+
+.reason-info {
+	text-align: center;
+	background-color: #eeeeee;
+}
+
+.reason-info h3 {
+	font-size: 21px;
+	line-height: 21px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.reason-info p {
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	color: #333333;
+}
+
+.search {}
+
+.search-intro {
+	text-align: center;
+	background-color: #ffffff;
+}
+
+.search-title {
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.search-text {
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #333333;
+}
+
+.popup-search-button {
+	font: inherit;
+	text-align: center;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #ffffff;
+	text-transform: uppercase;
+	border: none;
+	vertical-align: middle;
+
+	background-color: #766357;
+}
+
+.popup-search-button:hover {
+	font: inherit;
+	text-align: center;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #ffffff;
+	text-transform: uppercase;
+	border: none;
+	vertical-align: middle;
+
+	background-color: #604e43
+}
+
+.popup-search-button:activ {
+	font: inherit;
+	text-align: center;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: rgba(255, 255, 255, 0.3);
+	text-transform: uppercase;
+	border: none;
+	vertical-align: middle;
+
+	background-color: #503e33;
+}
+
+.search-form-block {}
+
+.search-form {
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+
+	background-color: #ffffff;
+}
+
+.date-arrival {}
+
+.date-departure {}
+
+.number-person {}
+
+.date-arrival input,
+.date-departure input,
+.number-person input 
+{
+	font: inherit;
+	text-align: left;
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+	text-transform: uppercase;
+	vertical-align: middle;
+
+	border: none;
+	background-color: #f2f2f2;
+}
+
+.date-arrival input:hover,
+.date-departure input:hover,
+.number-person input:hover {
+	font: inherit;
+	text-align: left;
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+	text-transform: uppercase;
+	vertical-align: middle;
+
+	border: none;
+	background-color: #ebebeb;
+}
+
+.date-arrival input:focus,
+.date-departure input:focus,
+.number-person input:focus {
+	font: inherit;
+	text-align: left;
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+	text-transform: uppercase;
+	vertical-align: middle;
+
+	border: none;
+	background-color: #ffffff;
+}
+
+
+.search-button {
+	font: inherit;
+	text-align: center;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #ffffff;
+	text-transform: uppercase;
+	border: none;
+	vertical-align: middle;
+
+	background-color: #81b3d2;
+}
+
+.search-button:hover {
+	font: inherit;
+	text-align: center;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #ffffff;
+	text-transform: uppercase;
+	border: none;
+	vertical-align: middle;
+
+	background-color: #669ec0;
+}
+
+.search-button:activ {
+	font: inherit;
+	text-align: center;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: rgba(255, 255, 255, 0.3);
+	text-transform: uppercase;
+	border: none;
+	vertical-align: middle;
+
+	background-color: #5496bd;
+}
+
+.main-footer {}
+
+.hashtag {
+	text-align: center;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+
+	background-color: #ffffff;
+}
+
+.footer-social {}
+
+.footer-social-list {
+	text-align: center;
+	list-style: none;
+}
+
+.footer-copyright {
+	text-align: center;
+}
+
+<!--HOTELS-->
+.search {}
+
+.search-form {
+	color: #ffffff;
+
+	background-color: #688fb6;
+	background-image: url(img/filter-background.jpg);
+	background-repeat: no-repeat;
+}
+
+.search-form legend {
+	font-size: 16px;
+	line-height: 21px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.search-form label {
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.search-form input {
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.search-result {
+	font: inherit;
+	text-align: center;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	color: #ffffff;
+	text-transform: uppercase;
+	border: 3px solid #ffff;
+	vertical-align: middle;
+
+	background-color: rgba(255,255,255,0.3);
+}
+
+.search-result:hover {
+	font: inherit;
+	text-align: center;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	color: #000000;
+	text-transform: uppercase;
+	border: 3px solid #ffff;
+	vertical-align: middle;
+
+	background-color: #ffffff;
+}
+
+.sorting {}
+
+.sorting-hotels-nav {
+	background-color: #ffffff;
+}
+
+.search-output {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.sorting-settings {
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: 400;
+	color: #000000;
+}
+
+.sorting-settings p {
+	color: #000000;
+}
+
+.sorting-settings-items a {
+	list-style: none;
+	color: rgba(0, 0, 0, 0.3);
+	border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+}
+
+.sorting-settings a:activ {
+	list-style: none;
+	color: #81b3d2;
+}
+
+.sorting-settings a:hover {
+	list-style: none;
+	color: #81b3d2;
+	border-bottom: 1px dotted #81b3d2;
+}
+
+/*Как обозначить момент нажатия?? какой псевдокласс?*/
+.sorting-settings a:focus {
+	list-style: none;
+	color: #000000;
+	border-bottom: 1px #000000;
+}
+
+.hotel-card {}
+
+.hotel-description {}
+
+.hotel-name a{
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+	text-align: left;
+}
+
+.hotel-name a:hover {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #81b3d2;
+	text-align: left;
+}
+
+.hotel-name a:activ {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: rgba(0, 0, 0, 0.3);
+	text-align: left;
+}
+
+.hotel-text {
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	color: #333333;
+	text-align: left;
+}
+
+.button-more {
+	font: inherit;
+	text-align: center;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 700;
+	color: #ffffff;
+	text-transform: uppercase;
+	border: none;
+	vertical-align: middle;
+
+	background-color: #81b3d2;
+
+}
+
+.button-more:hover {
+	background-color: #669ec0
+}
+
+.button-more:activ {
+	color: rgba(255, 255, 255, 0.3);
+	background-color: #5496bd
+}
+
+.button-book {
+	font: inherit;
+	text-align: center;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 700;
+	color: #ffffff;
+	text-transform: uppercase;
+	border: none;
+	vertical-align: middle;
+
+	background-color: #766357;
+}
+
+.button-book:hover {
+	background-color: #604e43;
+}
+
+.button-book:activ {
+	color: rgba(255, 255, 255, 0.3);
+	background-color: #503e33;
+}
