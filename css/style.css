@@ -525,7 +525,86 @@ a {
 	background-color: #604e43;
 }
 
-.button-book:activ {
+.button-book:active {
 	color: rgba(255, 255, 255, 0.3);
 	background-color: #503e33;
 }
+
+/*Сеточные стили*/
+html, 
+body {
+	min-width: 1200px;
+	}
+
+body {
+	
+}
+
+.header {
+	width: 100%;
+}
+
+/* как вариант
+.items-navigation {
+	width: 88%;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.menu-left {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.menu-right {
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu-left div:nth-child(2) {
+	margin-right: 
+}
+*/
+
+.main-header {
+	position: relative;
+}
+
+.main-navigation-logo {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	line-height: 0;
+	display: inline-block;
+}
+
+.main-navigation {
+	padding-right: 6%;
+	padding-left: 6%;
+}
+
+.items-navigation {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+}
+
+/*.items-navigation li:nth-child(1),
+.items-navigation li:nth-child(2) {
+	margin-right: auto;
+}*/
+
+.items-navigation li:nth-child(3),
+.items-navigation li:nth-child(4) {
+	align-self: flex-end;
+}
+
+.items-navigation li {
+	width: 20%;
+}
+
