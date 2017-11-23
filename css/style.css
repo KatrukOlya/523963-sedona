@@ -1,6 +1,8 @@
 body {
 	margin: 0;
 	padding: 0;
+	max-width: 1200px;
+	min-width: 768px;
 
 	font-family: "PT Sans", "Arial", san-serif;
 	font-size: 14px;
@@ -47,16 +49,34 @@ a {
 }
 
 .banner {
-	background-position: top center;
-	background-image: url("../img/background.jpg");
-	background-repeat: no-repeat;
-	background-size: 1200px 800px;
+	height: 513px;
+
+	background-image: url("../img/banner-mask.png"), url("../img/background.jpg");
+	background-position: 0 bottom, 0 0;
+	background-repeat: no-repeat, no-repeat;
+	background-size: 100%, 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 54px;
+}
+
+.banner-text {
+	size: 100%;
 }
 
 .reasons {}
 
 .reason-title {
-	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	width: 100%;
+	margin-bottom: 54px;
 }
 
 .reason-title h2 {
@@ -64,6 +84,7 @@ a {
 	line-height: 26px;
 	font-weight: 700;
 	color: #000000;
+	text-align: center;
 }
 
 .reason-title p {
@@ -73,11 +94,23 @@ a {
 	color: #333333;
 }
 
-.reason-main {}
+.reason-main {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
 
 .reason-main-info {
 	text-align: center;
 	background-color: #81b3d2;
+	height: 258px;
+	width: 33%;
+	padding-top:auto;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: stretch;
 }
 
 .reason-main-info h3{
@@ -85,6 +118,10 @@ a {
 	line-height: 21px;
 	font-weight: 700;
 	color: #ffffff;
+	text-align: center;
+	width: 100%;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 .reason-main-info p {
@@ -92,17 +129,34 @@ a {
 	line-height: 21px;
 	font-weight: 400;
 	color: #ffffff;
+	text-align: center;
+	width: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
-.reason-main-picture {}
+.reason-main-picture {
+	width: 67%;
+	margin: 0;
+	padding-right: 0;
+}
 
-.reason-more {}
+.reason-more {
+	width: 100%;
+	height: 334px;
+	display: flex;
+	justify-content: space-between;
+}
 
 .reason-more-housing,
 .reason-more-eat,
 .reason-more-souvenirs {
 	text-align: center;
 	background-color: #ffffff;
+	width: 33%;
+	padding-left: 6%;
+	padding-right: 6%;
+	margin-top: 167px;
 }
 
 .reason-more-housing h3,
@@ -123,11 +177,22 @@ a {
 	color: #333333;
 }
 
-.reason {}
+.reason {
+	width: 100%;
+	height: 257px;
+	background-color: #eeeeee;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
 
 .reason-info {
 	text-align: center;
-	background-color: #eeeeee;
+	
+	width: 33%;
+	padding-left: 6%;
+	padding-right: 6%;
 }
 
 .reason-info h3 {
@@ -149,23 +214,41 @@ a {
 .search-intro {
 	text-align: center;
 	background-color: #ffffff;
+	width: 100%;
+	height: 291px;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
 }
 
 .search-title {
 	font-size: 30px;
 	line-height: 36px;
 	font-weight: 700;
+	text-align: center;
 	color: #000000;
+	width: 100%;
+	padding-left: 20%;
+	padding-right: 20%;
+	margin-top: 54px;
 }
 
 .search-text {
 	font-size: 14px;
 	line-height: 24px;
 	font-weight: 400;
+	text-align: center;
 	color: #333333;
+	width: 100%;
+	padding-left: 30%;
+	padding-right: 30%;
 }
 
 .popup-search-button {
+	width: 568px;
+	height: 86px;
 	font: inherit;
 	text-align: center;
 	font-size: 21px;
@@ -175,8 +258,9 @@ a {
 	text-transform: uppercase;
 	border: none;
 	vertical-align: middle;
-
 	background-color: #766357;
+
+	margin-bottom: 0px;
 }
 
 .popup-search-button:hover {
@@ -316,7 +400,19 @@ a {
 	background-color: #5496bd;
 }
 
-.main-footer {}
+.map {
+	width: 100%;
+	height: 471px;
+}
+
+.main-footer {
+	width: 100%;
+	height: 120px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 .hashtag {
 	text-align: center;
@@ -326,16 +422,29 @@ a {
 	color: #000000;
 
 	background-color: #ffffff;
+
+	width: 33%;
 }
 
-.footer-social {}
+.footer-social {
+	width: 33%;
+}
 
 .footer-social-list {
 	text-align: center;
 	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-social-list li:nth-child (1),
+.footer-social-list li:nth-child (2) {
+	margin-right: 10px;
 }
 
 .footer-copyright {
+	width: 33%;
 	text-align: center;
 }
 
@@ -530,45 +639,6 @@ a {
 	background-color: #503e33;
 }
 
-/*Сеточные стили*/
-html, 
-body {
-	min-width: 1200px;
-	}
-
-body {
-	
-}
-
-.header {
-	width: 100%;
-}
-
-/* как вариант
-.items-navigation {
-	width: 88%;
-	margin-left: auto;
-	margin-right: auto;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
-.menu-left {
-	display: flex;
-	justify-content: flex-start;
-}
-
-.menu-right {
-	display: flex;
-	justify-content: space-between;
-}
-
-.menu-left div:nth-child(2) {
-	margin-right: 
-}
-*/
-
 .main-header {
 	position: relative;
 }
@@ -589,22 +659,32 @@ body {
 
 .items-navigation {
 	display: flex;
-	flex-direction: column;
 	padding: 0;
 	margin: 0;
 }
 
-/*.items-navigation li:nth-child(1),
+
+.items-navigation li:nth-child(3) {
+	margin-left: auto;
+}
+
+.items-navigation li:nth-child(1),
 .items-navigation li:nth-child(2) {
-	margin-right: auto;
-}*/
+	text-align: left;
+}
 
 .items-navigation li:nth-child(3),
 .items-navigation li:nth-child(4) {
-	align-self: flex-end;
+	text-align: right;
 }
 
 .items-navigation li {
 	width: 20%;
+	padding-top: 16px;
+	padding-bottom: 18px;
 }
+
+
+
+
 
