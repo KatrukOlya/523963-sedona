@@ -100,7 +100,7 @@
 
 			</section>
 
-			<div class="search">
+			<div class="feedback">
 
 				<header class="search-intro">
 					<h2 class="search-title">Заинтересовались?</h2>
@@ -112,16 +112,20 @@
 					<form class="form-mini">
 
 						<div class="date-arrival">
-							<label>Дата заезда:<input type="date" name="date-arrival"></label>
+							<label for="date-arrival">Дата заезда:</label>
+							<input id="date-arrival" type="date" name="date-arrival">
 						</div>
 
 						<div class="date-departure">
-							<label>Дата выезда:<input type="date" name="date-departure"></label>
+							<label for="date-departure"> Дата выезда:</label>
+							<input id="date-departure" type="date" name="date-departure">
 						</div>
 
 						<div class="number-person">
-							<label>Взрослые:<input type="number" name="number-grown" step="1" min="1"></label>
-							<label>Дети:<input type="number" name="number-children" step="1" min="0"></label>
+							<label for="number-grown">Взрослые:</label>
+							<input id="number-grown" type="number" name="number-grown" step="1" min="1">
+							<label for="">Дети:</label>
+							<input id="number-children" type="number" name="number-children" step="1" min="0">
 						</div>
 
 						<input class="search-button" type="submit" value="Найти">
