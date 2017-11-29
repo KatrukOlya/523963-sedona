@@ -1,9 +1,6 @@
 body {
 	margin: 0;
 	padding: 0;
-	max-width: 1200px;
-	min-width: 768px;
-
 	font-family: "PT Sans", "Arial", san-serif;
 	font-size: 14px;
 	line-height: 21px;
@@ -12,6 +9,12 @@ body {
 	text-transform: uppercase;
 
 	background-color: #ffffff;
+}
+
+.container {
+	margin: 0 auto;
+	min-width: 768px;
+	max-width: 1200px;
 }
 
 a {
@@ -150,6 +153,7 @@ a {
 .reason-more-housing,
 .reason-more-eat,
 .reason-more-souvenirs {
+	position: relative;
 	text-align: center;
 	background-color: #ffffff;
 	width: 33%;
@@ -166,6 +170,40 @@ a {
 	line-height: 21px;
 	font-weight: 700;
 	color: #000000;
+}
+
+.reason-more-housing h3::before {
+	content: "";
+	position: absolute;
+	top: -87px;
+	text-align: center;
+	background-image: url("../img/icon-housing.svg"); 
+	width: 75px;
+	height: 72px;
+	background-color: white;
+}
+
+.reason-more-eat h3::before {
+	content: "";
+	position: absolute;
+	top: -87px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-image: url("../img/icon-eat.svg"); 
+	width: 74px;
+	height: 70px;
+	background-color: white;
+}
+
+.reason-more-souvenirs h3::before {
+	content: "";
+	position: absolute;
+	top: -87px;
+	text-align: center;
+	background-image: url("../img/icon-souvenirs.svg"); 
+	width: 64px;
+	height: 76px;
+	background-color: white;
 }
 
 .reason-more-housing p,
@@ -313,7 +351,12 @@ a {
 	background-color: #ffffff;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: flex-end;
 	
+}
+
+.form-mini label {
+	 padding: 5px;
 }
 
 .date-arrival,
@@ -322,9 +365,9 @@ a {
 	margin-bottom: 30px;
 }
 
-.date-arrival input,
-.date-departure input,
-.number-person input {
+.date-arrival,
+.date-departure,
+.number-person {
 	font: inherit;
 	text-align: left;
 	font-size: 14px;
@@ -338,20 +381,30 @@ a {
 	background-color: #f2f2f2;
 }
 
-.date-arrival input,
-.date-departure input {
+.date-arrival,
+.date-departure {
 	width: 336px;
 	padding: 5px;
+	margin-left: auto;
 }
 
-.number-person input {
+.children {
+	margin-right: 27px;
+	margin-left: auto;
+}
+
+.grown {
+	margin-right: 28px;
+}
+
+.number-person {
 	width: 109px;
 	padding: 5px;
 }
 
-.date-arrival input:hover,
-.date-departure input:hover,
-.number-person input:hover {
+.date-arrival:hover,
+.date-departure:hover,
+.number-person:hover {
 	font: inherit;
 	text-align: left;
 	font-size: 14px;
@@ -365,9 +418,9 @@ a {
 	background-color: #ebebeb;
 }
 
-.date-arrival input:focus,
-.date-departure input:focus,
-.number-person input:focus {
+.date-arrival:focus,
+.date-departure:focus,
+.number-person:focus {
 	font: inherit;
 	text-align: left;
 	font-size: 14px;
@@ -436,7 +489,6 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	vertical-align: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
@@ -465,15 +517,47 @@ a {
 	align-items: center;
 }
 
-.footer-social-list li:nth-child (1),
-.footer-social-list li:nth-child (2) {
-	margin-right: 10px;
+.social-button {
+	display: inline-block;
+	width: 46px;
+	height: 48px;
+	background-color: #81b3d2
+}
+
+.social-tw {
+	background-image: url("../img/tw.png");
+	margin-right: 5px;
+}
+
+.social-fb {
+	background-image: url("../img/fb.png");
+	margin-right: 5px;
+}
+
+.social-youtube {
+	background-image: url("../img/youtube.png");
 }
 
 .footer-copyright {
 	width: 33%;
 	text-align: center;
+	position: relative;
 }
+
+/*.footer-copyright a::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 115px;
+	height: 41px;
+	right: 40px;
+	top: -10px;
+	background-image: url("../img/logo-academy.svg");
+	background-color: black;
+	background-repeat: no-repeat;
+
+}
+*/
 
 <!--HOTELS-->
 

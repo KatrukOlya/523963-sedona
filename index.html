@@ -111,23 +111,17 @@
 				<div class="search-form-mini">
 					<form class="form-mini">
 
-						<div class="date-arrival">
-							<label for="date-arrival">Дата заезда:</label>
-							<input id="date-arrival" type="date" name="date-arrival">
-						</div>
-
-						<div class="date-departure">
-							<label for="date-departure"> Дата выезда:</label>
-							<input id="date-departure" type="date" name="date-departure">
-						</div>
-
-						<div class="number-person">
-							<label for="number-grown">Взрослые:</label>
-							<input id="number-grown" type="number" name="number-grown" step="1" min="1">
-							<label for="">Дети:</label>
-							<input id="number-children" type="number" name="number-children" step="1" min="0">
-						</div>
-
+						<label for="date-arrival">Дата заезда:</label>
+						<input class="date-arrival" id="date-arrival" type="date" name="date-arrival">
+					
+						<label for="date-departure"> Дата выезда:</label>
+						<input class="date-departure" id="date-departure" type="date" name="date-departure">
+												
+						<label class="grown" for="number-grown">Взрослые:</label>
+						<input class="number-person" id="number-grown" type="number" name="number-grown" step="1" min="1">
+						<label class="children" for="number-children">Дети:</label>
+						<input class="number-person" id="number-children" type="number" name="number-children" step="1" min="0">
+						
 						<input class="search-button" type="submit" value="Найти">
 
 					</form>	
@@ -146,17 +140,15 @@
 
 			<div class="footer-social">
 				<ul class="footer-social-list">
-					<li><a class="social-button" href="#">Твиттер</a></li>
-					<li><a class="social-button" href="#">Фейсбук</a></li>
-					<li><a class="social-button" href="#">Ютуб</a></li>
+					<li><a class="social-button social-tw" href="#"></a></li>
+					<li><a class="social-button social-fb" href="#"></a></li>
+					<li><a class="social-button social-youtube" href="#"></a></li>
 				</ul>
 			</div>
 
 			<div class="footer-copyright">
 				website by
-				<a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-copyright-link">
-					<img src="img/logo-academy.svg" alt="логотип академии" width="115" height="41">
-				</a>
+				<a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-copyright-link"></a>
 			</div>
 		</footer>
 	</div>
