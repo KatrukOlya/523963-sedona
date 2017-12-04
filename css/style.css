@@ -359,11 +359,11 @@ a {
 	background-color: #ffffff;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: flex-end;
-}
+	}
 
 .form-mini label {
-	 padding: 5px;
+position: relative;
+padding: 5px;
 }
 
 .date-arrival,
@@ -391,49 +391,89 @@ a {
 .date-arrival,
 .date-departure {
 	position: relative;
-	width: 323px;
-	padding: 5px 10px 5px 13px;
+	width: 293px;
+	padding: 5px 40px 5px 13px;
 	margin-left: auto;
 }
 
-.calendar {
+button[class="calendar"] {
 	position: absolute;
+	display: inline-block;
+	z-index: 10;
+	border: none;
+	outline: none; 
 	width: 21px;
 	height: 22px;
-	right: 10px;
+	left: 425px;
 	top: 6px;
+	background-image: url("../img/calendar-grey.svg");
+}
+
+button[class="calendar"]:hover {
 	background-image: url("../img/calendar.svg");
 }
 
-.calendar-2 {
-	position: absolute;
-	width: 21px;
-	height: 22px;
-	right: 10px;
-	top: 73px;
-	fill: #d4d4d4;
+button[class="calendar"]:active {
+	background-image: url("../img/calendar-blue.svg");
 }
 
-[class^="caalendar"]:hover {
-	fill: #000000;
-} 
-
-[class^="caalendar"]:active {
-	fill: #81b3d2;
-}
-
-.children {
+label[class="grown"] {
 	margin-right: 27px;
+}
+
+label[class="children"] {
+	margin-right: 22px;
 	margin-left: auto;
 }
 
-.grown {
-	margin-right: 28px;
+.number-person {
+	width: 38px;
+	height: 36px;
 }
 
-.number-person {
-	width: 109px;
-	padding: 5px;
+button[class="minus"],
+button[class="plus"] {
+	display: inline-block;
+	border: none;
+	outline: none;
+	color: #000000;
+	width: 38px;
+	height: 38px;
+	background-color: #f2f2f2;
+	background-position: 50% 50%;
+}
+
+.grown button[class="minus"],
+.children button[class="minus"] {
+	background-image: url("../img/minus-norm.png");
+	background-repeat: no-repeat; 
+}
+
+.grown button[class="plus"],
+.children button[class="plus"] {
+	background-image: url("../img/plus-norm.png");
+	background-repeat: no-repeat; 
+}
+
+
+button[class="minus"]:hover {
+	background-image: url("../img/minus-hover.png");
+	background-repeat: no-repeat; 
+}
+
+button[class="plus"]:hover {
+	background-image: url("../img/plus-hover.png");
+	background-repeat: no-repeat; 
+}
+
+button[class="minus"]:active {
+	background-image: url("../img/minus-active.png");
+	background-repeat: no-repeat;  
+}
+
+button[class="plus"]:active {
+	background-image: url("../img/plus-active.png");
+	background-repeat: no-repeat;  
 }
 
 .date-arrival:hover,
@@ -453,9 +493,26 @@ a {
 }
 
 .date-arrival:focus,
-.date-departure:focus,
+.date-departure:focus {
+	padding: 3px 38px 3px 11px;
+	font: inherit;
+	text-align: left;
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+	text-transform: uppercase;
+	vertical-align: middle;
+	outline: none;
+	border: 2px solid #e5e5e5;
+	background-color: #ffffff;
+}
+
+
 .number-person:focus {
 	font: inherit;
+	height: 32px;
+	width: 34px;
 	text-align: left;
 	font-size: 14px;
 	line-height: 26px;
@@ -571,31 +628,37 @@ a {
 }
 
 .footer-copyright {
+	
 	width: 33%;
 	text-align: center;
 }
 
 .footer-copyright a {
 	display: inline-block;
-	vertical-align: middle;
+	position: relative;
 }
 
-.footer-copyright a svg {
+.footer-copyright a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: -20px;
 	display: inline-block;
+	background-image: url("../img/logo-academy-norm.svg");
+	background-repeat: no-repeat;
 	width: 115px;
 	height: 41px;
-	fill: black;
 }
 
-.footer-copyright a:hover svg{
-	fill: #81b3d2;
+.footer-copyright a:hover {
+	background-image: url("../img/logo-academy-hover.svg");
+	background-size: 115px 41px;
 }
 
-.footer-copyright a:active svg {
-	fill: black;
-	opacity: 0.3;
+.footer-copyright a:actve {
+	background-image: url("../img/logo-academy-active.svg");
+	background-size: 115px 41px;
 }
- 
 
 <!--HOTELS-->
 
@@ -615,7 +678,6 @@ a {
 	color: #ffffff;
 	display: flex;
 	padding-top: 25px;
-	padding-bottom: 25px;
 	width: 100%;
 }
 
@@ -648,6 +710,39 @@ a {
 	line-height: 21px;
 	font-weight: 400;
 	color: #ffffff;
+}
+
+.search-infrastructure legend,
+.type legend {
+	margin-bottom: 28px;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+input[type="checkbox"] + label {
+	position: relative;
+	display: inline-block;
+	margin-bottom: 30px;
+	padding-left: 35px;
+}
+
+input[type="checkbox"] + .search-label .checkbox-indicator {
+	position: absolute;
+	left: 0px;
+	top: -5px;
+	display: inline-block;
+	width: 27px;
+	height: 23px;
+	border: 2px solid white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+input[type="checkbox"]:checked + .search-label .checkbox-indicator {
+	background-image: url("../img/checkbox-on.png");
+	background-size:;
 }
 
 .search-form input {
@@ -757,6 +852,13 @@ a {
 	margin-left: auto;
 }
 
+.sorting-icons svg {
+	display: inline-block;
+	margin: 0;
+	padding-right: 0;
+	fill: #766357;
+}
+
 .hotels {
 
 }
@@ -795,6 +897,11 @@ a {
 }
 
 .stars {
+	display: inline-block;
+	text-align: right;
+	width: 18px;
+	height: 17px;
+	background-image: url("../img/star.png");
 }
 
 .hotel-rating {
