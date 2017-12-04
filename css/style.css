@@ -1,7 +1,6 @@
 body {
 	margin: 0;
 	padding: 0;
-
 	font-family: "PT Sans", "Arial", san-serif;
 	font-size: 14px;
 	line-height: 21px;
@@ -10,6 +9,12 @@ body {
 	text-transform: uppercase;
 
 	background-color: #ffffff;
+}
+
+.container {
+	margin: 0 auto;
+	min-width: 768px;
+	max-width: 1200px;
 }
 
 a {
@@ -35,11 +40,11 @@ a {
 	color: #81b3d2;
 }
 
-.items-navigation a:activ {
+.items-navigation a:active {
 	color: #000000;
 }
 
-.items-navigation a:focus {
+.items-navigation a.active {
 	color: #766357;
 }
 
@@ -47,16 +52,34 @@ a {
 }
 
 .banner {
-	background-position: top center;
-	background-image: url("../img/background.jpg");
-	background-repeat: no-repeat;
-	background-size: 1200px 800px;
+	background-image: url("../img/banner-mask.png"), url("../img/background-sedona.jpg");
+	background-position: 0 bottom, 0 0;
+	background-repeat: no-repeat, no-repeat;
+	background-size: 100%, 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 54px;
+	padding-top: 40px;
+	padding-bottom: 80px;
+}
+
+.banner-text {
+	size: 100%;
 }
 
 .reasons {}
 
 .reason-title {
-	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	width: 100%;
+	margin-bottom: 54px;
 }
 
 .reason-title h2 {
@@ -64,6 +87,7 @@ a {
 	line-height: 26px;
 	font-weight: 700;
 	color: #000000;
+	text-align: center;
 }
 
 .reason-title p {
@@ -73,11 +97,23 @@ a {
 	color: #333333;
 }
 
-.reason-main {}
+.reason-main {
+	width: 100%;
+	display: flex;
+}
 
 .reason-main-info {
 	text-align: center;
 	background-color: #81b3d2;
+	width: 33%;
+	padding-top:20px;
+	padding-bottom: 30px;
+	padding-right: 20px;
+	padding-left: 20px;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .reason-main-info h3{
@@ -85,6 +121,10 @@ a {
 	line-height: 21px;
 	font-weight: 700;
 	color: #ffffff;
+	text-align: center;
+	width: 100%;
+	margin-left: 100px;
+	margin-right: 100px;
 }
 
 .reason-main-info p {
@@ -92,17 +132,35 @@ a {
 	line-height: 21px;
 	font-weight: 400;
 	color: #ffffff;
+	text-align: center;
+	width: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
-.reason-main-picture {}
+.reason-main-picture {
+	width: 67%;
+	margin: 0;
+	margin-bottom: -6px;
+}
 
-.reason-more {}
+.reason-more {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
 
 .reason-more-housing,
 .reason-more-eat,
 .reason-more-souvenirs {
+	position: relative;
 	text-align: center;
 	background-color: #ffffff;
+	width: 33%;
+	padding-left: 6%;
+	padding-right: 6%;
+	padding-top: 167px;
+	padding-bottom: 50px;
 }
 
 .reason-more-housing h3,
@@ -114,6 +172,45 @@ a {
 	color: #000000;
 }
 
+.reason-more-housing::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 62px;
+	left: 50%;
+	transform:translateX(-37px);
+	background-image: url("../img/icon-housing.svg"); 
+	width: 75px;
+	height: 72px;
+	background-color: white;
+}
+
+.reason-more-eat::before {
+	content: "";
+	position: absolute;
+	display: inline-block;
+	top: 62px;
+	left: 50%;
+	transform:translateX(-37px);
+	background-image: url("../img/icon-eat.svg"); 
+	width: 74px;
+	height: 70px;
+	background-color: white;
+}
+
+.reason-more-souvenirs::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 62px;
+	left: 50%;
+	transform:translateX(-32px);
+	background-image: url("../img/icon-souvenirs.svg"); 
+	width: 64px;
+	height: 76px;
+	background-color: white;
+}
+
 .reason-more-housing p,
 .reason-more-eat p,
 .reason-more-souvenirs p {
@@ -123,11 +220,23 @@ a {
 	color: #333333;
 }
 
-.reason {}
+.reason {
+	width: 100%;
+	background-color: #eeeeee;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+}
 
 .reason-info {
 	text-align: center;
-	background-color: #eeeeee;
+	
+	width: 33%;
+	padding-left: 6%;
+	padding-right: 6%;
 }
 
 .reason-info h3 {
@@ -144,30 +253,52 @@ a {
 	color: #333333;
 }
 
-.search {}
+.feedback {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 
 .search-intro {
 	text-align: center;
 	background-color: #ffffff;
+	width: 100%;
+	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .search-title {
 	font-size: 30px;
 	line-height: 36px;
 	font-weight: 700;
+	text-align: center;
 	color: #000000;
+	width: 100%;
+	padding-left: 20%;
+	padding-right: 20%;
+	margin-top: 54px;
 }
 
 .search-text {
 	font-size: 14px;
 	line-height: 24px;
 	font-weight: 400;
+	text-align: center;
 	color: #333333;
+	width: 100%;
+	padding-left: 30%;
+	padding-right: 30%;
+	margin-bottom: 50px;
 }
 
 .popup-search-button {
+	width: 568px;
 	font: inherit;
 	text-align: center;
+	padding: 35px 137px;
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
@@ -175,8 +306,9 @@ a {
 	text-transform: uppercase;
 	border: none;
 	vertical-align: middle;
-
 	background-color: #766357;
+
+	margin-bottom: 0px;
 }
 
 .popup-search-button:hover {
@@ -193,7 +325,7 @@ a {
 	background-color: #604e43
 }
 
-.popup-search-button:activ {
+.popup-search-button:active {
 	font: inherit;
 	text-align: center;
 	font-size: 21px;
@@ -207,27 +339,42 @@ a {
 	background-color: #503e33;
 }
 
-.search-form-block {}
+.search-form-mini {
+	position: absolute;
+	top: 40%;
+	width: 454px;
+	background-color: #ffffff;
+	display: flex;
+	padding: 57px;
+	padding-left: 57px;
+}
 
-.search-form {
+.form-mini {
+	position: relative;
+	width: 100%;
 	font-size: 14px;
 	line-height: 26px;
 	font-weight: 700;
 	color: #000000;
-
 	background-color: #ffffff;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
 }
 
-.date-arrival {}
+.form-mini label {
+	 padding: 5px;
+}
 
-.date-departure {}
+.date-arrival,
+.date-departure,
+.number-person {
+	margin-bottom: 30px;
+}
 
-.number-person {}
-
-.date-arrival input,
-.date-departure input,
-.number-person input 
-{
+.date-arrival,
+.date-departure,
+.number-person {
 	font: inherit;
 	text-align: left;
 	font-size: 14px;
@@ -241,9 +388,57 @@ a {
 	background-color: #f2f2f2;
 }
 
-.date-arrival input:hover,
-.date-departure input:hover,
-.number-person input:hover {
+.date-arrival,
+.date-departure {
+	position: relative;
+	width: 323px;
+	padding: 5px 10px 5px 13px;
+	margin-left: auto;
+}
+
+.calendar {
+	position: absolute;
+	width: 21px;
+	height: 22px;
+	right: 10px;
+	top: 6px;
+	background-image: url("../img/calendar.svg");
+}
+
+.calendar-2 {
+	position: absolute;
+	width: 21px;
+	height: 22px;
+	right: 10px;
+	top: 73px;
+	fill: #d4d4d4;
+}
+
+[class^="caalendar"]:hover {
+	fill: #000000;
+} 
+
+[class^="caalendar"]:active {
+	fill: #81b3d2;
+}
+
+.children {
+	margin-right: 27px;
+	margin-left: auto;
+}
+
+.grown {
+	margin-right: 28px;
+}
+
+.number-person {
+	width: 109px;
+	padding: 5px;
+}
+
+.date-arrival:hover,
+.date-departure:hover,
+.number-person:hover {
 	font: inherit;
 	text-align: left;
 	font-size: 14px;
@@ -257,9 +452,9 @@ a {
 	background-color: #ebebeb;
 }
 
-.date-arrival input:focus,
-.date-departure input:focus,
-.number-person input:focus {
+.date-arrival:focus,
+.date-departure:focus,
+.number-person:focus {
 	font: inherit;
 	text-align: left;
 	font-size: 14px;
@@ -268,13 +463,17 @@ a {
 	color: #000000;
 	text-transform: uppercase;
 	vertical-align: middle;
-
-	border: none;
+	outline: none;
+	border: 2px solid #e5e5e5;
 	background-color: #ffffff;
 }
 
 
 .search-button {
+	width: 458px;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	margin-top: 25px;
 	font: inherit;
 	text-align: center;
 	font-size: 21px;
@@ -284,7 +483,6 @@ a {
 	text-transform: uppercase;
 	border: none;
 	vertical-align: middle;
-
 	background-color: #81b3d2;
 }
 
@@ -302,7 +500,7 @@ a {
 	background-color: #669ec0;
 }
 
-.search-button:activ {
+.search-button:active {
 	font: inherit;
 	text-align: center;
 	font-size: 21px;
@@ -316,7 +514,17 @@ a {
 	background-color: #5496bd;
 }
 
-.main-footer {}
+.map {
+	width: 100%;
+}
+
+.main-footer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
 
 .hashtag {
 	text-align: center;
@@ -326,28 +534,106 @@ a {
 	color: #000000;
 
 	background-color: #ffffff;
+
+	width: 33%;
 }
 
-.footer-social {}
+.footer-social {
+	width: 33%;
+}
 
 .footer-social-list {
-	text-align: center;
 	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.social-button {
+	display: inline-block;
+	width: 46px;
+	height: 48px;
+	background-color: #81b3d2
+}
+
+.social-tw {
+	background-image: url("../img/tw.png");
+	margin-right: 5px;
+}
+
+.social-fb {
+	background-image: url("../img/fb.png");
+	margin-right: 5px;
+}
+
+.social-youtube {
+	background-image: url("../img/youtube.png");
 }
 
 .footer-copyright {
+	width: 33%;
 	text-align: center;
 }
 
+.footer-copyright a {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.footer-copyright a svg {
+	display: inline-block;
+	width: 115px;
+	height: 41px;
+	fill: black;
+}
+
+.footer-copyright a:hover svg{
+	fill: #81b3d2;
+}
+
+.footer-copyright a:active svg {
+	fill: black;
+	opacity: 0.3;
+}
+ 
+
 <!--HOTELS-->
-.search {}
+
+.main-content {
+	position: relative;
+}
+
+.search {
+	padding-right: 6%;
+	padding-left: 6%;
+	background-image: url(../img/filter-background.jpg);
+	background-color: #688fb6;
+	background-repeat: no-repeat;
+}
 
 .search-form {
 	color: #ffffff;
+	display: flex;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	width: 100%;
+}
 
-	background-color: #688fb6;
-	background-image: url(img/filter-background.jpg);
-	background-repeat: no-repeat;
+.search-form fieldset {
+	border: 0 none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.search-infrastructure,
+.type {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+}
+
+.search-form fieldset.price {
+	margin-left: auto;
 }
 
 .search-form legend {
@@ -399,17 +685,29 @@ a {
 	background-color: #ffffff;
 }
 
-.sorting {}
+.sorting {
+	padding-left: 6%;
+	padding-right: 6%;
+}
 
 .sorting-hotels-nav {
 	background-color: #ffffff;
+	width: 100%;
+	padding-top: 26px;
+	padding-bottom: 30px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid black;
 }
 
 .search-output {
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
+	text-align: left;
 	color: #000000;
+	width: 140px;
+	margin-right: 23px;
 }
 
 .sorting-settings {
@@ -417,19 +715,27 @@ a {
 	line-height: 18px;
 	font-weight: 400;
 	color: #000000;
+	width: 500px;
+	display: flex;
+	justify-content: flex-start;
 }
 
 .sorting-settings p {
 	color: #000000;
 }
 
-.sorting-settings-items a {
+.sorting-settings a {
 	list-style: none;
 	color: rgba(0, 0, 0, 0.3);
 	border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+	margin-right: 34px;
 }
 
-.sorting-settings a:activ {
+.sorting-settings a:first-child {
+	margin-left: 39px;
+}
+
+.sorting-settings a.active {
 	list-style: none;
 	color: #81b3d2;
 }
@@ -440,18 +746,92 @@ a {
 	border-bottom: 1px dotted #81b3d2;
 }
 
-/*Как обозначить момент нажатия?? какой псевдокласс?*/
-.sorting-settings a:focus {
+.sorting-settings a:active {
 	list-style: none;
 	color: #000000;
 	border-bottom: 1px #000000;
 }
 
-.hotel-card {}
+.sorting-icons {
+	width: 45px;
+	margin-left: auto;
+}
 
-.hotel-description {}
+.hotels {
 
-.hotel-name a{
+}
+
+.hotel-card {
+	display: flex;
+	align-items: stretch;
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid black;
+}
+
+.hotel-photo {
+	margin: 0px;
+	padding: 0px;
+	margin-right: 30px;
+	margin-bottom: -5px;
+}
+
+.hotel-description {
+	width: 258px;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.hotel-status {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-between;
+	margin-left: auto;
+}
+
+.stars {
+}
+
+.hotel-rating {
+	background-color: #f2f2f2;
+	width: 110px;
+	text-align: center;
+	vertical-align: center;
+	color: #666666;
+	font: 14px;
+	line-height: 21px;
+	font-weight: 400;
+}
+
+.hotel-text {
+	display: flex;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	color: #333333;
+	margin: 0px;
+	padding: 0px;
+}
+
+.hotel-text p {
+	width: 110px;
+	text-align: left;
+	padding:0;
+	margin:0;
+	margin-right: 8px;
+}
+
+.hotel-name {
+	margin: 0px;
+	padding: 0px;
+}
+
+.hotel-name a {
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
@@ -467,7 +847,7 @@ a {
 	text-align: left;
 }
 
-.hotel-name a:activ {
+.hotel-name a:active {
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
@@ -475,15 +855,13 @@ a {
 	text-align: left;
 }
 
-.hotel-text {
-	font-size: 14px;
-	line-height: 21px;
-	font-weight: 400;
-	color: #333333;
-	text-align: left;
-}
-
 .button-more {
+	width: 110px;
+	height: 27px;
+	padding-right: 17px;
+	padding-left: 17px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	font: inherit;
 	text-align: center;
 	font-size: 14px;
@@ -493,7 +871,6 @@ a {
 	text-transform: uppercase;
 	border: none;
 	vertical-align: middle;
-
 	background-color: #81b3d2;
 
 }
@@ -502,12 +879,18 @@ a {
 	background-color: #669ec0
 }
 
-.button-more:activ {
+.button-more:active {
 	color: rgba(255, 255, 255, 0.3);
 	background-color: #5496bd
 }
 
 .button-book {
+	width: 142px;
+	height: 27px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 17px;
+	padding-right: 17px;
 	font: inherit;
 	text-align: center;
 	font-size: 14px;
@@ -525,7 +908,59 @@ a {
 	background-color: #604e43;
 }
 
-.button-book:activ {
+.button-book:active {
 	color: rgba(255, 255, 255, 0.3);
 	background-color: #503e33;
 }
+
+.main-header {
+	position: relative;
+}
+
+.main-navigation-logo {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	line-height: 0;
+	display: inline-block;
+}
+
+.main-navigation {
+	padding-right: 6%;
+	padding-left: 6%;
+}
+
+.items-navigation {
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+
+.items-navigation li:nth-child(3) {
+	margin-left: auto;
+}
+
+.items-navigation li:nth-child(1),
+.items-navigation li:nth-child(2) {
+	text-align: left;
+}
+
+.items-navigation li:nth-child(3),
+.items-navigation li:nth-child(4) {
+	text-align: right;
+}
+
+.items-navigation li {
+	width: 20%;
+	padding-top: 16px;
+	padding-bottom: 18px;
+}
+
+.visually-hidden {
+	display: none;
+}
+
+
+

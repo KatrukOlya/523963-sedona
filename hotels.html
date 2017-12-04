@@ -17,7 +17,7 @@
 					<li><a href="information.html">Информация</a></li>
 					<li><a href="photo-video.html">Фото и видео</a></li>
 					<li><a href="map.html">Карта штата</a></li>
-					<li><a href="hotels.html">Гостиницы</a></li>
+					<li><a class="active" href="hotels.html">Гостиницы</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -31,29 +31,41 @@
 
 						<legend>Инфраструктура:</legend>
 
-						<input type="checkbox" class="search-item" id="pool">
-						<label for="pool" class="search-label">Бассейн</label>
+						<div class="search-checkbox">
+							<input type="checkbox" class="search-item" id="pool">
+							<label for="pool" class="search-label">Бассейн</label>
+						</div>
 
-						<input type="checkbox" class="search-item" id="parks">
-						<label for="parks" class="search-label">Парковка</label>
+						<div class="search-checkbox">
+							<input type="checkbox" class="search-item" id="parks">
+							<label for="parks" class="search-label">Парковка</label>
+						</div>
 
-						<input type="checkbox" class="search-item" id="wi-fi">
-						<label for="wi-fi" class="search-label">wi-fi</label>
-
+						<div class="search-checkbox">
+							<input type="checkbox" class="search-item" id="wi-fi">
+							<label for="wi-fi" class="search-label">wi-fi</label>
+						</div>
+						
 					</fieldset>
 
 					<fieldset class="type">
 
 						<legend>Тип жилья:</legend>
 						
-						<input type="checkbox" class="search-item" id="hotel">
-						<label for="hotel" class="search-label">Отель</label>
+						<div class="search-checkbox">
+							<input type="checkbox" class="search-item" id="hotel">
+							<label for="hotel" class="search-label">Отель</label>
+						</div>
 
-						<input type="checkbox" class="search-item" id="motel">
-						<label for="motel" class="search-label">Мотель</label>
-
-						<input type="checkbox" class="search-item" id="appartament">
-						<label for="appartament" class="search-label">Апартаменты</label>
+						<div class="search-checkbox">
+							<input type="checkbox" class="search-item" id="motel">
+							<label for="motel" class="search-label">Мотель</label>
+						</div>
+						
+						<div class="search-checkbox">
+							<input type="checkbox" class="search-item" id="appartament">
+							<label for="appartament" class="search-label">Апартаменты</label>
+						</div>
 
 					</fieldset>
 
@@ -95,25 +107,23 @@
 				<h2 class="visually-hidden">Подходящие отели</h2>
 
 				<header class="sorting-hotels-nav">
+
 					<p class="search-output">Найдено:3</p>
+
 					<div class="sorting-settings">
 						<p>Сортировка:</p>
-						<ul class="sorting-settings-items">
-							<li><a href="#">По цене</a></li>
-							<li><a href="#">По типу</a></li>
-							<li><a href="#">По рейтингу</a></li>
-						</ul>
+						<p><a href="#">По цене</a></p>
+						<p><a href="#">По типу</a></p>
+						<p><a href="#">По рейтингу</a></p>
 					</div>
 
 					<div class="sorting-icons">
-						<a href="#">сортировка по возрастанию</a>
-						<a href="#">сортировка по убыванию</a>
+						<a href="#">V1</a>
+						<a href="#">V2</a>
 					</div>
 				</header>
-			
 
 				<div class="hotels">
-
 					<!---AMARA RESORT-->
 					<article class="hotel-card">
 						<div class="hotel-photo">
@@ -121,21 +131,19 @@
 						</div>
 
 						<div class="hotel-description">
-							<h3 class="hotel-name"><a href="#">Amara resot end spa</a><h3/>
-								<div class="hotel-text">
-									<p>Гостиница<p/>
-									<p>от 4000 р.</p>
-								</div>
+							<h3 class="hotel-name"><a href="#">Amara resot end spa</a></h3>
+							<div class="hotel-text">
+								<p>Гостиница</p>
+								<p>от 4000 р.</p>
+							</div>
 
-								<div class="hotel-more">
-									<a class="button-more" href="#">Подробнее</a>
-									<button class="button-book" type="button">Забронировать</button>
-								</div>
-															
+							<div class="hotel-more">
+								<a class="button-more" href="#">Подробнее</a>
+								<button class="button-book" type="button">Забронировать</button>
+							</div>				
 						</div>
 
 						<div class="hotel-status">
-
 							<span class="stars">
 								Четыре звезды
 							</span>
@@ -143,7 +151,6 @@
 							<div class="hotel-rating">
 								<p class="hotel-rating-text">Рейтинг: 8,5</p>
 							</div>
-
 						</div>
 					</article>
 
@@ -154,18 +161,16 @@
 						</div>
 
 						<div class="hotel-description">
-							<h3 class="hotel-name"><a href="#">Desert quail inn</a><h3/>
+							<h3 class="hotel-name"><a href="#">Desert quail inn</a></h3>
+							<div class="hotel-text">
+								<p>Мотель</p>
+								<p>от 3000 р.</p>
+							</div>
 
-								<div class="hotel-text">
-									<p>Мотель<p/>
-									<p>от 3000 р.</p>
-								</div>
-
-								<div class="hotel-more">
-									<a class="button-more" href="#">Подробнее</a>
-									<button class="button-book" type="button">Забронировать</button>
-								</div>
-															
+							<div class="hotel-more">
+								<a class="button-more" href="#">Подробнее</a>
+								<button class="button-book" type="button">Забронировать</button>
+							</div>				
 						</div>
 
 						<div class="hotel-status">
@@ -189,15 +194,15 @@
 						</div>
 
 						<div class="hotel-description">
-							<h3 class="hotel-name"><a href="#">Villas at Poco Diablo</a><h3/>
+							<h3 class="hotel-name"><a href="#">Villas at Poco Diablo</a></h3>
 
 								<div class="hotel-text">
-									<p>Апартаменты<p/>
+									<p>Апартаменты</p>
 									<p>от 2000 р.</p>
 								</div>
 
 								<div class="hotel-more">
-									<a class="button-more" type="button">Подробнее</button>
+									<a class="button-more" href="#">Подробнее</a>
 									<button class="button-book" type="button">Забронировать</button>
 								</div>
 
@@ -227,16 +232,15 @@
 
 			<div class="footer-social">
 				<ul class="footer-social-list">
-					<li><a class="social-button" href="#">Твиттер</a></li>
-					<li><a class="social-button" href="#">Фейсбук</a></li>
-					<li><a class="social-button" href="#">Ютуб</a></li>
+					<li><a class="social-button social-tw" href="#"></a></li>
+					<li><a class="social-button social-fb" href="#"></a></li>
+					<li><a class="social-button social-youtube" href="#"></a></li>
 				</ul>
 			</div>
 
 			<div class="footer-copyright">
 				website by
 				<a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-copyright-link">
-					<img src="img/logo-academy.svg" alt="логотип академии" width="115" height="41">
 				</a>
 			</div>
 
