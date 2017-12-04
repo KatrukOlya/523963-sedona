@@ -52,7 +52,7 @@ a {
 }
 
 .banner {
-	background-image: url("../img/banner-mask.png"), url("../img/background.jpg");
+	background-image: url("../img/banner-mask.png"), url("../img/background-sedona.jpg");
 	background-position: 0 bottom, 0 0;
 	background-repeat: no-repeat, no-repeat;
 	background-size: 100%, 100%;
@@ -159,8 +159,8 @@ a {
 	width: 33%;
 	padding-left: 6%;
 	padding-right: 6%;
-	margin-top: 167px;
-	margin-bottom: 50px;
+	padding-top: 167px;
+	padding-bottom: 50px;
 }
 
 .reason-more-housing h3,
@@ -172,34 +172,39 @@ a {
 	color: #000000;
 }
 
-.reason-more-housing h3::before {
+.reason-more-housing::before {
 	content: "";
+	display: inline-block;
 	position: absolute;
-	top: -87px;
-	text-align: center;
+	top: 62px;
+	left: 50%;
+	transform:translateX(-37px);
 	background-image: url("../img/icon-housing.svg"); 
 	width: 75px;
 	height: 72px;
 	background-color: white;
 }
 
-.reason-more-eat h3::before {
+.reason-more-eat::before {
 	content: "";
 	position: absolute;
-	top: -87px;
+	display: inline-block;
+	top: 62px;
 	left: 50%;
-	transform: translateX(-50%);
+	transform:translateX(-37px);
 	background-image: url("../img/icon-eat.svg"); 
 	width: 74px;
 	height: 70px;
 	background-color: white;
 }
 
-.reason-more-souvenirs h3::before {
+.reason-more-souvenirs::before {
 	content: "";
+	display: inline-block;
 	position: absolute;
-	top: -87px;
-	text-align: center;
+	top: 62px;
+	left: 50%;
+	transform:translateX(-32px);
 	background-image: url("../img/icon-souvenirs.svg"); 
 	width: 64px;
 	height: 76px;
@@ -249,6 +254,7 @@ a {
 }
 
 .feedback {
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -290,9 +296,9 @@ a {
 
 .popup-search-button {
 	width: 568px;
-	height: 86px;
 	font: inherit;
 	text-align: center;
+	padding: 35px 137px;
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
@@ -334,15 +340,17 @@ a {
 }
 
 .search-form-mini {
+	position: absolute;
+	top: 40%;
 	width: 454px;
 	background-color: #ffffff;
 	display: flex;
 	padding: 57px;
 	padding-left: 57px;
-
 }
 
 .form-mini {
+	position: relative;
 	width: 100%;
 	font-size: 14px;
 	line-height: 26px;
@@ -352,7 +360,6 @@ a {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;
-	
 }
 
 .form-mini label {
@@ -383,9 +390,36 @@ a {
 
 .date-arrival,
 .date-departure {
-	width: 336px;
-	padding: 5px;
+	position: relative;
+	width: 323px;
+	padding: 5px 10px 5px 13px;
 	margin-left: auto;
+}
+
+.calendar {
+	position: absolute;
+	width: 21px;
+	height: 22px;
+	right: 10px;
+	top: 6px;
+	background-image: url("../img/calendar.svg");
+}
+
+.calendar-2 {
+	position: absolute;
+	width: 21px;
+	height: 22px;
+	right: 10px;
+	top: 73px;
+	fill: #d4d4d4;
+}
+
+[class^="caalendar"]:hover {
+	fill: #000000;
+} 
+
+[class^="caalendar"]:active {
+	fill: #81b3d2;
 }
 
 .children {
@@ -429,8 +463,8 @@ a {
 	color: #000000;
 	text-transform: uppercase;
 	vertical-align: middle;
-
-	border: none;
+	outline: none;
+	border: 2px solid #e5e5e5;
 	background-color: #ffffff;
 }
 
@@ -487,7 +521,6 @@ a {
 .main-footer {
 	width: 100%;
 	display: flex;
-	justify-content: center;
 	align-items: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -510,7 +543,6 @@ a {
 }
 
 .footer-social-list {
-	text-align: center;
 	list-style: none;
 	display: flex;
 	justify-content: center;
@@ -541,23 +573,29 @@ a {
 .footer-copyright {
 	width: 33%;
 	text-align: center;
-	position: relative;
 }
 
-/*.footer-copyright a::after {
-	content: "";
+.footer-copyright a {
 	display: inline-block;
-	position: absolute;
+	vertical-align: middle;
+}
+
+.footer-copyright a svg {
+	display: inline-block;
 	width: 115px;
 	height: 41px;
-	right: 40px;
-	top: -10px;
-	background-image: url("../img/logo-academy.svg");
-	background-color: black;
-	background-repeat: no-repeat;
-
+	fill: black;
 }
-*/
+
+.footer-copyright a:hover svg{
+	fill: #81b3d2;
+}
+
+.footer-copyright a:active svg {
+	fill: black;
+	opacity: 0.3;
+}
+ 
 
 <!--HOTELS-->
 
