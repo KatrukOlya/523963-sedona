@@ -728,21 +728,23 @@ input[type="checkbox"] + label {
 	padding-left: 35px;
 }
 
-input[type="checkbox"] + .search-label .checkbox-indicator {
+label[class="search-label"]:before {
+	content: "";
 	position: absolute;
 	left: 0px;
-	top: -5px;
+	top: 0px;
 	display: inline-block;
-	width: 27px;
+	width: 23px;
 	height: 23px;
-	border: 2px solid white;
-	border-radius: 5px;
+	background-image: url("../img/checkbox-off.svg");
+	background-repeat: no-repeat;
 	cursor: pointer;
 }
 
-input[type="checkbox"]:checked + .search-label .checkbox-indicator {
-	background-image: url("../img/checkbox-on.png");
-	background-size:;
+input[type="checkbox"]:checked + label[class="search-label"]:before {
+	background-image: url("../img/checkbox-on.svg");
+	height: 27px;
+	width: 23px;
 }
 
 .search-form input {
@@ -852,11 +854,46 @@ input[type="checkbox"]:checked + .search-label .checkbox-indicator {
 	margin-left: auto;
 }
 
-.sorting-icons svg {
+.sorting-icons a {
+	position: relative;
+}
+
+.sort-up::before {
+	content: "";
 	display: inline-block;
-	margin: 0;
-	padding-right: 0;
-	fill: #766357;
+	position: absolute;
+	background-image: url("../img/icon-up-dir.svg");
+	background-repeat: no-repeat;
+	width: 11px;
+	height: 10px;
+	left: 13px;
+}
+
+.sort-down::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	background-image: url("../img/icon-down-dir.svg");
+	background-repeat: no-repeat;
+	width: 11px;
+	height: 10px;
+	left: 30px;
+}
+
+.sort-up:hover::before {
+	background-image: url("../img/icon-up-dir-hover.svg");
+}
+
+.sort-up:active::before {
+	background-image: url("../img/icon-up-dir-active.svg");
+}
+
+.sort-down:hover::before {
+	background-image: url("../img/icon-down-dir-hover.svg");
+}
+
+.sort-down:active::before {
+	background-image: url("../img/icon-down-dir-active.svg");
 }
 
 .hotels {
@@ -898,10 +935,24 @@ input[type="checkbox"]:checked + .search-label .checkbox-indicator {
 
 .stars {
 	display: inline-block;
-	text-align: right;
 	width: 18px;
 	height: 17px;
+	margin-right: 5px;
 	background-image: url("../img/star.png");
+	background-repeat: space;
+}
+
+.Amara-stars {
+	width: 106px;
+} 
+
+.Desert-stars {
+	width: 66px;
+}
+
+.Villas-stars {
+	width: 44px;
+
 }
 
 .hotel-rating {
