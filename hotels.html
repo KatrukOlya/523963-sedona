@@ -72,28 +72,20 @@
 					<fieldset class="price">
 						<legend>Стоимость в сутки (р):</legend>
 
-						<div class="range-number">
-							<div class="range-number-min">
-								<input type="text" class="price-min" id="min">
-								<label for="min">от</label>
-							</div>
-							<div class="range-number-max">
-								<input type="text" class="price-max" id="max">
-								<label for="max">до</label>
-							</div>
+						<div class="price-controls">						
+							<label for="min" class="min-price">от<input type="text" class="price-min" id="min" value="0"></label>
+							<label for="max" class="max-price">до<input type="text" class="price-max" id="max" value="3000"></label>			
 						</div>
 
-						<div class="range-slider">
-							<div class="range-slider-min">
-								<span class="point-left"></span> 
+						<div class="range-controls">
+							<div class="scale">
+								<div class="bar"></div> 
 							</div>
 
-							<div class="range-slider-max">
-								<span class="point-right"></span> 
+							<div class="range-toggle range-toggle-min">
 							</div>
 
-							<div class="range-slider-line">
-								<span class="line"></span> 
+							<div class="range-toggle range-toggle-max"> 
 							</div>
 						</div>
 
