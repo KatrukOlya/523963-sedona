@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Седона</title>
-	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">  
 </head>
@@ -114,22 +114,22 @@
 						<label for="date-arrival">
 							<button type="button" class="calendar"></button>Дата заезда:
 						</label>
-						<input class="date-arrival" id="date-arrival" type="text" name="date-arrival" value="24 апреля 2017">
+						<input class="date-arrival" id="date-arrival" type="text" name="date-arrival" value="24 апреля 2017" required>
 						
 											
 						<label for="date-departure">
 							<button type="button" class="calendar"></button>Дата выезда:
 						</label>
-						<input class="date-departure" id="date-departure" type="text" name="date-departure" value="4 июля 2017">
+						<input class="date-departure" id="date-departure" type="text" name="date-departure" value="4 июля 2017" required>
 												
 						<label class="grown" for="number-grown">Взрослые:</label>
 						<button type="button" class="minus"></button>						
-						<input class="number-person" id="number-grown" type="text" name="number-grown" step="1" min="1">
+						<input class="number-person" id="number-grown" type="text" name="number-grown" step="1" min="1" required>
 						<button type="button" class="plus"></button>
 						
 						<label class="children" for="number-children">Дети:</label>
 						<button type="button" class="minus"></button>						
-						<input class="number-person" id="number-children" type="text" name="number-children" step="1" min="0">
+						<input class="number-person" id="number-children" type="text" name="number-children" step="1" min="0" required>
 						<button type="button" class="plus"></button>
 						
 						<input class="search-button" type="submit" value="Найти">
@@ -163,5 +163,14 @@
 			</div>
 		</footer>
 	</div>
+	<script type="text/javascript">
+		var button = document.querySelector(".popup-search-button");
+		var popup = document.querySelector(".search-form-mini");
+
+		button.addEventListener("click", function () {
+			popup.classlist.add("search-form-mini-block");
+		});
+		
+	</script>
 </body>
 </html>

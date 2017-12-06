@@ -308,8 +308,8 @@ a {
 	border: none;
 	vertical-align: middle;
 	background-color: #766357;
-
 	margin-bottom: 0px;
+	outline: none;
 }
 
 .popup-search-button:hover {
@@ -342,12 +342,17 @@ a {
 
 .search-form-mini {
 	position: absolute;
-	top: 40%;
+	top: 323px;
 	width: 454px;
 	background-color: #ffffff;
 	display: flex;
 	padding: 57px;
 	padding-left: 57px;
+	
+}
+
+.search-form-mini-block {
+	display: none;
 }
 
 .form-mini {
@@ -437,21 +442,20 @@ button[class="plus"] {
 	display: inline-block;
 	border: none;
 	outline: none;
-	color: #000000;
 	width: 38px;
 	height: 38px;
 	background-color: #f2f2f2;
-	background-position: 50% 50%;
+	background-position: 50% 50%; 
 }
 
-.grown button[class="minus"],
-.children button[class="minus"] {
+button[class="minus"],
+button[class="minus"] {
 	background-image: url("../img/minus-norm.png");
 	background-repeat: no-repeat; 
 }
 
-.grown button[class="plus"],
-.children button[class="plus"] {
+button[class="plus"],
+button[class="plus"] {
 	background-image: url("../img/plus-norm.png");
 	background-repeat: no-repeat; 
 }
@@ -616,16 +620,43 @@ button[class="plus"]:active {
 
 .social-tw {
 	background-image: url("../img/tw.png");
+	background-repeat: no-repeat;
 	margin-right: 5px;
+}
+
+.social-tw:hover {
+	background-image: url("../img/tw-hover.png");
+}
+
+.social-tw:active {
+	background-image: url("../img/tw-active.png");
 }
 
 .social-fb {
 	background-image: url("../img/fb.png");
+	background-repeat: no-repeat;
 	margin-right: 5px;
+}
+
+.social-fb:hover {
+	background-image: url("../img/fb-hover.png");
+}
+
+.social-fb:active {
+	background-image: url("../img/fb-active.png");
 }
 
 .social-youtube {
 	background-image: url("../img/youtube.png");
+	background-repeat: no-repeat;
+}
+
+.social-youtube:hover {
+	background-image: url("../img/youtube-hover.png");
+}
+
+.social-youtube:active {
+	background-image: url("../img/youtube-active.png");
 }
 
 .footer-copyright {
@@ -651,14 +682,12 @@ button[class="plus"]:active {
 	height: 41px;
 }
 
-.footer-copyright a:hover {
+.footer-copyright a:hover::after {
 	background-image: url("../img/logo-academy-hover.svg");
-	background-size: 115px 41px;
 }
 
-.footer-copyright a:actve {
+.footer-copyright a:active::after {
 	background-image: url("../img/logo-academy-active.svg");
-	background-size: 115px 41px;
 }
 
 <!--HOTELS-->
@@ -731,9 +760,10 @@ input[type="checkbox"] + label {
 	display: inline-block;
 	margin-bottom: 30px;
 	padding-left: 35px;
+	cursor: pointer;
 }
 
-label[class="search-label"]:before {
+label[class="search-label"]::before {
 	content: "";
 	position: absolute;
 	left: 0px;
@@ -746,10 +776,22 @@ label[class="search-label"]:before {
 	cursor: pointer;
 }
 
-input[type="checkbox"]:checked + label[class="search-label"]:before {
+input[type="checkbox"]:checked + label[class="search-label"]::before {
 	background-image: url("../img/checkbox-on.svg");
 	height: 27px;
+	width: 25px;
+}
+
+input[type="checkbox"]:disabled + label[class="search-label"]::before {
+	background-image: url("../img/checkbox-disabled.svg");
+	height: 27px;
 	width: 23px;
+}
+
+input[type="checkbox"]:checked:disabled + label[class="search-label"]::before {
+	background-image: url("../img/checkbox-on-disabled.svg");
+	height: 27px;
+	width: 25px;
 }
 
 .search-form input {
@@ -803,6 +845,7 @@ input[type="checkbox"]:checked + label[class="search-label"]:before {
 	background: none;
 	border: none;
 	vertical-align: top;
+	outline: none;
 }
 
 .price-controls .min-price,
@@ -856,30 +899,21 @@ input[type="checkbox"]:checked + label[class="search-label"]:before {
 }
 
 .search-result {
-display: block;
-margin: 0 auto;
-padding: 6px 35px;
-font-size: 14px;
-line-height: 20px;
-color: #ffffff;
-text-transform: uppercase;
-background: transparent;
-border: 2px solid #ffffff;
-border-radius: 2px;
-cursor: pointer;
+	display: block;
+	margin: 0 auto;
+	padding: 6px 35px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #ffffff;
+	text-transform: uppercase;
+	background: transparent;
+	border: 2px solid #ffffff;
+	border-radius: 2px;
+	cursor: pointer;
 }
 
 .search-result:hover {
-	font: inherit;
-	text-align: center;
-	font-size: 14px;
-	line-height: 21px;
-	font-weight: 400;
 	color: #000000;
-	text-transform: uppercase;
-	border: 3px solid #ffffff;
-	vertical-align: middle;
-
 	background-color: #ffffff;
 }
 
@@ -1140,7 +1174,7 @@ cursor: pointer;
 	border: none;
 	vertical-align: middle;
 	background-color: #81b3d2;
-
+	cursor: pointer;
 }
 
 .button-more:hover {
@@ -1168,8 +1202,8 @@ cursor: pointer;
 	text-transform: uppercase;
 	border: none;
 	vertical-align: middle;
-
 	background-color: #766357;
+	cursor: pointer;
 }
 
 .button-book:hover {
