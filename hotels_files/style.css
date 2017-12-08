@@ -395,7 +395,7 @@ a {
 
 .search-form-mini {
 	position: absolute;
-	top: 305px;
+	top: 313px;
 	width: 454px;
 	background-color: #ffffff;
 	display: flex;
@@ -415,13 +415,13 @@ a {
 
 .form-error {
 	animation-name: shake;
-	animation-duration: 0,3s;
+	animation-duration: 0,6s;
 }
 
 @keyframes shake {
-	0%, 100% { transform: translateY(0); }
-	10%, 30%, 50%, 70%, 90% { transform: translateY(-5px); }
-	20%, 40%, 60%, 80% { transform: translateY(5px); }
+	0%, 100% { transform: translateX(0); }
+	10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+	20%, 40%, 60%, 80% { transform: translateX(10px); }
 }
 
 @keyframes delete {
@@ -598,9 +598,8 @@ button[class="plus"]:active {
 
 .number-person:focus {
 	font: inherit;
-	height: 31px;
-	width: 29px;
-	padding-left: 5px;
+	height: 29px;
+	width: 32px;
 	text-align: left;
 	font-size: 14px;
 	line-height: 26px;
@@ -679,14 +678,14 @@ button[class="plus"]:active {
 	width: 100%;
 	height: 600px;
 	border: 0;
-	z-index: 1;
+	z-index: 5;
 	background-image: url("../img/map.png");
 	background-size: cover;
 }
 
 .main-footer {
 	position: relative;
-	z-index: 5;
+	z-index: 6;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -696,7 +695,7 @@ button[class="plus"]:active {
 
 .footer-map {
 	position: relative;
-	z-index: 10;
+	z-index: 5;
 	display: flex;
 	align-items: center;
 	padding-top: 20px;

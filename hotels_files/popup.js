@@ -15,8 +15,6 @@ var button = document.querySelector(".popup-search-button");
 		form.addEventListener("submit", function(evt){
 			if (!arrival.value || !departure.value || !grown.value || !children.value) {
 				evt.preventDefault();
-				popup.classList.remove("form-error"); 
-				popup.offsetWidth = popup.offsetWidth; 
 				popup.classList.add("form-error");
 			} else {
 				localStorage.setItem("grown", grown.value);
