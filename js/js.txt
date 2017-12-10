@@ -1,6 +1,0 @@
-var button = document.querySelector(".popup-search-button");
-var popup = document.querySelector(".search-form-mini");
-
-button.addEventListener("click", function(){
-	console.log("klik po lubomu polu vokrug formy");
-});
