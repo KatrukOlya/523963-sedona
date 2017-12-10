@@ -593,7 +593,7 @@ padding-left: 0;
 	margin-left: auto;
 }
 
-button[class="calendar"] {
+.calendar {
 	position: absolute;
 	display: inline-block;
 	background-color: inherit;
@@ -606,15 +606,15 @@ button[class="calendar"] {
 	top: 6px;
 }
 
-button[class="calendar"] svg {
+.calendar svg {
 	fill: #a9a9a9;
 }
 
-button[class="calendar"] svg:hover {
+.calendar svg:hover {
 	fill: black;
 }
 
-button[class="calendar"] svg:active {
+.calendar svg:active {
 	fill: #81b3d2;
 }
 
