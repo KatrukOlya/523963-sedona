@@ -44,6 +44,7 @@ a {
 	    -ms-transform: translateX(-50%);
 	        transform: translateX(-50%);
 	line-height: 0;
+	z-index: 10;
 }
 
 .main-navigation {
@@ -105,11 +106,9 @@ a {
 	background-position: 0 bottom, 0 0;
 	background-repeat: no-repeat, no-repeat;
 	background-size: 100%, cover;
-
+	background-color: #b5c4d9;
 	display: -webkit-box;
-
 	display: -ms-flexbox;
-
 	display: flex;
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
@@ -147,7 +146,6 @@ a {
 	    flex-wrap: wrap;
 	width: 100%;
 	margin-bottom: 28px;
-	margin-top: ;
 }
 
 .reason-title h2 {
@@ -225,11 +223,13 @@ a {
 .reason-main-picture.picture-sedona {
 	background-image: url("../img/sedona-city-2.jpg");
 	background-size: cover;
+	background-color: #a08c83;
 }
 
 .reason-main-picture.picture-pont {
 	background-image: url("../img/devil-bridge.jpg");
 	background-size: cover;
+	background-color: #a08c83;
 }
 
 .reason-more {
@@ -269,6 +269,7 @@ a {
 	content: "";
 	display: inline-block;
 	position: absolute;
+	vertical-align: middle;
 	top: 62px;
 	left: 50%;
 	-webkit-transform:translateX(-37px);
@@ -284,6 +285,7 @@ a {
 	content: "";
 	position: absolute;
 	display: inline-block;
+	vertical-align: middle;
 	top: 62px;
 	left: 50%;
 	-webkit-transform:translateX(-37px);
@@ -299,6 +301,7 @@ a {
 	content: "";
 	display: inline-block;
 	position: absolute;
+	vertical-align: middle;
 	top: 62px;
 	left: 50%;
 	-webkit-transform:translateX(-32px);
@@ -346,6 +349,7 @@ a {
 
 .reason-info h3 {
 	display: inline-block;
+	vertical-align: middle;
 	font-size: 21px;
 	line-height: 21px;
 	font-weight: 700;
@@ -357,6 +361,7 @@ a {
 
 .reason-info p {
 	display: inline-block;
+	vertical-align: middle;
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: 400;
@@ -375,29 +380,28 @@ a {
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-	z-index: 10;
+	background-color: white;
+	z-index: 0;
 }
 
 .search-intro {
 	position: relative;
-	z-index: 3;
 	text-align: center;
 	background-color: #ffffff;
 	width: 100%;
-	
 	display: -webkit-box;
-	
 	display: -ms-flexbox;
-	
 	display: flex;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
+	z-index: 50;
 }
 
 .search-title {
+	position: relative;
 	font-size: 30px;
 	line-height: 36px;
 	font-weight: 700;
@@ -407,9 +411,11 @@ a {
 	padding-left: 35%;
 	padding-right: 35%;
 	margin-top: 49px;
+	background-color: white;
 }
 
 .search-text {
+	position: relative;
 	font-size: 14px;
 	line-height: 24px;
 	font-weight: 400;
@@ -420,11 +426,12 @@ a {
 	padding-right: 30%;
 	margin-bottom: 50px;
 	margin-top: -2px;
+	background-color: white;
 }
 
 .popup-search-button {
 	display: inline-block;
-	width: 288x;
+	position: relative;
 	font: inherit;
 	text-align: center;
 	padding: 30px 139px;
@@ -440,18 +447,54 @@ a {
 	outline: none;
 }
 
+.psevdo-button {
+	position: absolute;
+	display: inline-block;
+	height: 86px;
+	width: 568px;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	background-color: black;
+	visibility: hidden;
+	z-index: 0;
+}
+
 .popup-search-button:hover {
+	font: inherit;
+	text-align: center;
+	padding: 30px 139px;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #ffffff;
+	text-transform: uppercase;
+	border: none;
+	vertical-align: middle;
 	background-color: #604e43;
 }
 
 .popup-search-button:active {
+	font: inherit;
+	text-align: center;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
 	color: rgba(255, 255, 255, 0.3);
+	text-transform: uppercase;
+	border: none;
+	vertical-align: middle;
 	background-color: #503e33;
 }
 
 .search-form-mini {
 	position: absolute;
-	top: 281px;
+	top: -25px;
+	left: 0;
 	width: 454px;
 	background-color: #ffffff;
 	display: -webkit-box;
@@ -459,7 +502,7 @@ a {
 	display: flex;
 	padding: 57px;
 	padding-top: 65px;
-	z-index: 2;
+	visibility: visible;
 }
 
 .form-none {
@@ -490,8 +533,8 @@ a {
 .form-error {
 	-webkit-animation-name: shake;
 	        animation-name: shake;
-	-webkit-animation-duration: 0,3s;
-	        animation-duration: 0,3s;
+	-webkit-animation-duration: 2s;
+	        animation-duration: 2s;
 }
 
 @-webkit-keyframes shake {
@@ -531,14 +574,14 @@ a {
 }
 
 @-webkit-keyframes call {
-	0% {-webkit-transform: translateY(-500px);transform: translateY(-500px);
+	0% {-webkit-transform: translateY(-200px);transform: translateY(-200px);
 	}
 	100% {-webkit-transform: translateY(0);transform: translateY(0);
 	}
 }
 
 @keyframes call {
-	0% {-webkit-transform: translateY(-500px);transform: translateY(-500px);
+	0% {-webkit-transform: translateY(-200px);transform: translateY(-200px);
 	}
 	100% {-webkit-transform: translateY(0);transform: translateY(0);
 	}
@@ -561,12 +604,12 @@ a {
 	display: flex;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
-	}
+}
 
 .form-mini label {
-position: relative;
-padding: 5px;
-padding-left: 0;
+	position: relative;
+	padding: 5px;
+	padding-left: 0;
 }
 
 .date-arrival,
@@ -596,14 +639,15 @@ padding-left: 0;
 .calendar {
 	position: absolute;
 	display: inline-block;
+	vertical-align: middle;
 	background-color: inherit;
-	z-index: 10;
 	border: none;
 	outline: none; 
 	width: 21px;
 	height: 22px;
 	left: 417px;
 	top: 6px;
+	z-index: 2;
 }
 
 .calendar svg {
@@ -638,6 +682,7 @@ label[class="children"] {
 button[class="minus"],
 button[class="plus"] {
 	display: inline-block;
+	vertical-align: middle;
 	border: none;
 	outline: none;
 	width: 38px;
@@ -757,7 +802,6 @@ button[class="plus"]:active {
 	text-transform: uppercase;
 	border: none;
 	vertical-align: middle;
-
 	background-color: #669ec0;
 }
 
@@ -777,6 +821,7 @@ button[class="plus"]:active {
 
 .map {
 	width: 100%;
+	position: relative;
 }
 
 .map p {
@@ -787,7 +832,7 @@ button[class="plus"]:active {
 }
 
 .map p iframe {
-	display: relative;
+	position: relative;
 	bottom: 0;
 	left: 0;
 	margin: 0;
@@ -795,9 +840,9 @@ button[class="plus"]:active {
 	width: 100%;
 	height: 592px;
 	border: 0;
-	z-index: 1;
 	background-image: url("../img/map.png");
 	background-size: cover;
+	z-index: -3;
 }
 
 .main-footer {
@@ -814,26 +859,13 @@ button[class="plus"]:active {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	padding-top: 21px;
+	padding-bottom: 21px;
 }
 
 .footer-map {
-	position: relative;
-	z-index: 10;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	padding-top: 23px;
-	padding-bottom: 34px;
-	margin-top: -131px;
+	margin-top: -134px;
 	background-color: rgba(253, 253, 253, 0.8);
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
 }
 
 .hashtag {
@@ -879,6 +911,7 @@ button[class="plus"]:active {
 
 .social-button{
 	display: inline-block;
+	vertical-align: middle;
 	position: relative;
 	width: 46px;
 	height: 48px;
@@ -952,6 +985,7 @@ button[class="plus"]:active {
 .footer-copyright a {
 	display: inline-block;
 	position: relative;
+	vertical-align: middle;
 }
 
 .footer-copyright a svg {
@@ -960,6 +994,7 @@ button[class="plus"]:active {
 	left: 0;
 	top: -20px;
 	display: inline-block;
+	vertical-align: middle;
 	width: 115px;
 	height: 41px;
 	fill: black;
@@ -972,8 +1007,6 @@ button[class="plus"]:active {
 .footer-copyright a svg:active {
 	fill: #bdbbbc;
 }
-
-<!--HOTELS-->
 
 .main-content {
 	position: relative;
@@ -1048,6 +1081,7 @@ input[type="checkbox"] {
 input[type="checkbox"] + label {
 	position: relative;
 	display: inline-block;
+	vertical-align: middle;
 	margin-bottom: 30px;
 	padding-left: 35px;
 	cursor: pointer;
@@ -1059,6 +1093,7 @@ label[class="search-label"]::before {
 	left: 0px;
 	top: 0px;
 	display: inline-block;
+	vertical-align: middle;
 	width: 23px;
 	height: 23px;
 	background-image: url("../img/checkbox-off.svg");
@@ -1121,28 +1156,29 @@ input[type="checkbox"]:checked:disabled + label[class="search-label"]::before {
 
 .price-controls label {
 	display: inline-block;
+	vertical-align: middle;
 	font-size: 14px;
-	line-height: 38px;
-	vertical-align: top;
+	line-height: 21px;
 	cursor: pointer;
 }
 
 .price-controls input {
 	width: 50px;
+	height: 20px;
 	margin: 0;
-	padding: 0 5px;
+	padding: 5px;
 	color: inherit;
 	font: inherit;
 	background: none;
 	border: none;
-	vertical-align: top;
+	vertical-align: middle;
 	outline: none;
 }
 
 .price-controls .min-price,
 .price-controls .max-price {
 	width: 90px;
-	padding-left: 65px;
+	padding-left: 37px;
 	cursor: pointer;
 }
 
@@ -1150,6 +1186,7 @@ input[type="checkbox"]:checked:disabled + label[class="search-label"]::before {
 	position: relative;
 	width: 319px;
 	display: inline-block;
+	vertical-align: middle;
 	margin-bottom: 32px;
 	font-size: 14px;
 }
@@ -1308,12 +1345,14 @@ input[type="checkbox"]:checked:disabled + label[class="search-label"]::before {
 
 .sort-up svg {
 	display: inline-block;
+	vertical-align: middle;
 	position: absolute;
 	left: 11px;
 }
 
 .sort-down svg {
 	display: inline-block;
+	vertical-align: middle;
 	position: absolute;
 	left: 34px;
 }
@@ -1351,8 +1390,8 @@ input[type="checkbox"]:checked:disabled + label[class="search-label"]::before {
 	width: 100%;
 	padding-right: 6%;
 	padding-left: 6%;
-	padding-top: 28px;
-	padding-bottom: 35px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 	border-bottom: 1px solid #e5e5e5;
 }
 
@@ -1400,6 +1439,7 @@ input[type="checkbox"]:checked:disabled + label[class="search-label"]::before {
 
 .stars {
 	display: inline-block;
+	vertical-align: middle;
 	width: 18px;
 	height: 17px;
 	margin-right: 5px;
@@ -1424,7 +1464,7 @@ input[type="checkbox"]:checked:disabled + label[class="search-label"]::before {
 	background-color: #f2f2f2;
 	width: 110px;
 	text-align: center;
-	vertical-align: center;
+	vertical-align: middle;
 	color: #666666;
 	font: 14px;
 	line-height: 21px;
@@ -1546,7 +1586,11 @@ input[type="checkbox"]:checked:disabled + label[class="search-label"]::before {
 
 
 .visually-hidden {
-	display: none;
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
 }
 
 
